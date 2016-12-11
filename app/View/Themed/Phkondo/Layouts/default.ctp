@@ -97,6 +97,7 @@ if (!isset($headerTitle)){
         echo $this->Html->script(array('libs/datepicker/bootstrap-datepicker.min'));
         echo $this->Html->script(array('libs/datepicker/bootstrap-datepicker.pt.min'));
         echo $this->Html->script(array('libs/datepicker/bootstrap-datepicker.en-GB.min'));
+        echo $this->Html->script(array('libs/datepicker/bootstrap-datepicker.it-IT.min'));
         echo $this->Html->script(array('libs/select2/select2'));
         echo $this->Html->script(array('libs/offcanvas'));
 
@@ -107,6 +108,9 @@ if (!isset($headerTitle)){
                 break;
             case 'eng':
                 echo $this->Html->script(array('libs/select2/select2_locale_en'));
+                break;
+            case 'ita':
+                echo $this->Html->script(array('libs/select2/select2_locale_it'));
                 break;
         }
         $phkondo = array(
@@ -127,6 +131,9 @@ if (!isset($headerTitle)){
                 switch (phkondo.APP_LANG) {
                     case 'por':
                         phkondolang = 'pt';
+                        break;
+                    case 'ita':
+                        phkondolang = 'it';
                         break;
                 }
                 $('.datefield').datepicker({
